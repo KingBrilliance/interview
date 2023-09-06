@@ -17,17 +17,16 @@ func (h HeapSort) SortImpl() {
 }
 
 func (h HeapSort) heapify(arr HeapSort, l, n int) {
-	tmp := arr[l]
-	for i := 2*l + 1; i < n; i = 2*l + 1 {
+	val := arr[l]
+	for i := l*2 + 1; i < n; i = l*2 + 1 {
 		if i+1 < n && arr[i] < arr[i+1] {
 			i++
 		}
-		if arr[i] <= tmp {
+		if arr[i] <= val {
 			break
 		}
 		arr[l] = arr[i]
 		l = i
 	}
-
-	arr[l] = tmp
+	arr[l] = val
 }
