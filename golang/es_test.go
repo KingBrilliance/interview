@@ -1,4 +1,4 @@
-package interview
+package golang
 
 import (
 	"context"
