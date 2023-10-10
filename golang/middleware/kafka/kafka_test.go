@@ -1,6 +1,8 @@
 package kafka
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestKafka(t *testing.T) {
 	//config := sarama.NewConfig()
